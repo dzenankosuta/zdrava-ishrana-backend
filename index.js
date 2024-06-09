@@ -1,3 +1,4 @@
+import * as dotenv from "dotenv";
 import express from "express";
 import { handleLogin } from "./controllers/authController.js";
 import {
@@ -5,6 +6,8 @@ import {
   handleDelete,
   handleGetUser,
 } from "./controllers/userController.js";
+
+dotenv.config();
 
 const app = express();
 app.use(express.json());
